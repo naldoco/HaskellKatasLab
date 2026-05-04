@@ -1,0 +1,158 @@
+---- #### QUICKCHECK TESTS
+    it "...arbitrary numbers..." $ do
+      property $ \ x y -> do
+        multiply x y `shouldBe` (x * y)
+
+---- #### SOLUTIONS
+multiply :: Int -> Int -> Int
+multiply = (*)
+
+----
+multiply :: Int -> Int -> Int
+multiply a b = a * b
+
+----
+multiply :: Int -> Int -> Int
+multiply a b = head $ do
+  return $ a * b
+
+----
+import Data.Maybe
+
+multiply :: Int -> Int -> Int
+multiply a b = fromJust $ do
+  return $ a * b
+
+----
+multiply :: Int -> Int -> Int
+multiply a b 
+  | b == 0 = 0
+  | b > 0 =  a + multiply a (b - 1)
+  | b < 0 =  multiply a (b + 1) - a
+
+----
+import System.IO.Unsafe
+
+multiply :: Int -> Int -> Int
+multiply a b = unsafePerformIO $ do
+  return $ a * b
+
+----
+import System.IO.Unsafe (unsafePerformIO)
+
+multiply :: Int -> Int -> Int
+multiply a b =
+  unsafePerformIO
+  $ do
+      putStrLn "Missile launched!"
+      putStrLn
+        $    "By the way: "
+          ++ show a
+          ++ " * "
+          ++ show b
+          ++ " = "
+          ++ show result
+      return result
+  where
+    result = a * b
+
+----
+import Prelude hiding (return)
+return = id
+
+multiply :: Int -> Int -> Int
+multiply a b = do
+  return $ a * b
+
+----
+multiply :: Int -> Int -> Int
+multiply a b = do
+  (*) a b
+
+----
+multiply :: Int -> Int -> Int
+multiply = \a      b   -> a * b
+
+----
+multiply :: Int -> Int -> Int
+multiply a = (a*)
+
+----
+multiply = (*)
+
+----
+import Data.Functor.Identity (Identity)
+
+multiply :: Int -> Int -> Identity Int
+multiply a b = do
+  return $ a * b
+
+----
+import Data.Functor.Identity
+
+multiply :: Int -> Int -> Int
+multiply a b = runIdentity $ do
+  return $ a * b
+
+----
+import Data.Function
+--import Data.Functor.Identity
+
+multiply :: Int -> Int -> Int
+multiply a b = a & (*) b
+
+----
+multiply :: Int -> Int -> Int
+multiply      7      7 =   49
+multiply     11     11 =  121
+multiply     11      2 =   22
+multiply      a      b = a * b
+
+----
+multiply :: Int -> Int -> Int
+multiply a b = (*) a b
+
+----
+import Data.Maybe
+
+multiply :: Int -> Int -> Int
+multiply a b = fromMaybe 0 $ do
+  return $ a * b
+
+----
+--import Data.Maybe
+
+multiply :: Int -> Int -> Int
+multiply a b = head (do return (a * b))
+
+----
+multiply :: Int -> Int -> Int
+multiply 0 _ = 0
+multiply _ 0 = 0
+multiply a b = a * b
+
+----
+multiply :: Int -> Int -> Int
+multiply 0 b = 0
+multiply a b = a*b
+
+----
+multiply::Int->Int->Int
+multiply s m=m*s
+
+----
+multiply :: Int -> Int -> Int
+multiply a b = let
+  in (a * b)
+
+----
+multiply :: Int -> Int -> Int
+multiply a b = (*) a b
+
+----
+
+
+----
+
+
+

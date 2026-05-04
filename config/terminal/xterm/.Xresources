@@ -1,0 +1,7 @@
+xterm*faceName: Monospace
+xterm*faceSize: 11
+XTerm*geometry: 140x30
+XTerm*Background: black
+XTerm*Foreground: white
+xterm*borderColor: gray50
+xterm*colorInnerBorder: true

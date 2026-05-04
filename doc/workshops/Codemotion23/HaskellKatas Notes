@@ -1,0 +1,31 @@
+---- NEWK
+Shift-Alt-P     (Show IDE)
+Shift-Alt-Q     (Exit IDE)
+
+Shift-Alt-1     (Show window 1: REPL)
+Shift-Alt-2     (Show window 2: git diff)
+Shift-Alt-3     (Show window 3: stack build) Compiler
+Shift-Alt-4     (Show window 4: Command - git) To give orders
+Shift-Alt-5     (Show window 5: KATA editor) Emacs
+Shift-Alt-7     (Show window 7: Navegator) Abrowser
+
+Shift-Alt-+     (xterm: Zoom in)
+
+newk -s         (Show all kataficated solutions)
+
+--- EMACS
+M-X column-number-mode
+C-X C-+    (Zoom in)
+M-P        (Save all)
+---- Emacs Dante (Haskell)
+M-X dante-restart
+C-C .      (type of selection)
+C-U C-C .  (insert types)
+
+---- HINDENT
+stack install hindent
+mv /home/haskellkatas/.local/bin/hindent ~/bin
+hindent --help
+
+cat src/* | hindent
+

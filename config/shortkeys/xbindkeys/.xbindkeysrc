@@ -1,0 +1,115 @@
+# For the benefit of emacs users: -*- shell-script -*-
+###########################
+# xbindkeys configuration #
+###########################
+#
+# To reload configuration:
+# killall -s1 xbindkeys ; xbindkeys -f ~/.xbindkeysrc
+#
+# Version: 1.8.6
+#
+# If you edit this file, do not forget to uncomment any lines
+# that you change.
+# The pound(#) symbol may be used anywhere for comments.
+#
+# To specify a key, you can use 'xbindkeys --key' or
+# 'xbindkeys --multikey' and put one of the two lines in this file.
+#
+# The format of a command line is:
+#    "command to start"
+#       associated key
+#
+#
+# A list of keys is in /usr/include/X11/keysym.h and in
+# /usr/include/X11/keysymdef.h
+# The XK_ is not needed.
+#
+# List of modifier:
+#   Release, Control, Shift, Mod1 (Alt), Mod2 (NumLock),
+#   Mod3 (CapsLock), Mod4, Mod5 (Scroll).
+#
+
+# The release modifier is not a standard X modifier, but you can
+# use it if you want to catch release events instead of press events
+
+# By defaults, xbindkeys does not pay attention with the modifiers
+# NumLock, CapsLock and ScrollLock.
+# Uncomment the lines above if you want to pay attention to them.
+
+#keystate_numlock = enable
+#keystate_capslock = enable
+#keystate_scrolllock= enable
+
+# Examples of commands:
+
+#"xbindkeys_show" 
+#  control+shift + q
+
+# set directly keycode (here control + f with my keyboard)
+#"xterm"
+#  c:41 + m:0x4
+
+# specify a mouse button
+#"xterm"
+#  control + b:2
+
+#"xterm -geom 50x20+20+20"
+#   Shift+Mod2+alt + s
+#
+## set directly keycode (here control+alt+mod2 + f with my keyboard)
+#"xterm"
+#  alt + c:0x29 + m:4 + mod2
+#
+## Control+Shift+a  release event starts rxvt
+#"rxvt"
+#  release+control+shift + a
+#
+## Control + mouse button 2 release event starts rxvt
+#"rxvt"
+#  Control + b:2 + Release
+
+###### newk shortcuts
+#
+#"Terminal window from which the kata was launched" 
+"newk -p"
+  shift+alt + p
+
+#"Quit kata environment (main windows)" 
+"newk -q"
+  shift+alt + q
+
+# Show Terminal initial window
+"wmctrl -a 'HaskellKatas'"
+  shift+alt + 0
+
+# Show "stack ghci" window
+"wmctrl -a 'stack ghci'"
+  shift+alt + 1
+
+# Show "git diff" window
+"wmctrl -a 'git diff'"
+  shift+alt + 2
+ Chromium
+# Show "stack build" window
+"wmctrl -a 'stack build'"
+  shift+alt + 3
+
+# Show "Command - git" window
+"wmctrl -a 'Command - git'"
+  shift+alt + 4
+
+# Show editor window (emacs)
+"wmctrl -a 'KATA: '"
+  shift+alt + 5
+
+# Show Firefox's window of title: 'Solutions | Codewars - Mozilla Firefox 
+"wmctrl -a '| Codewars - Mozilla Firefox' || wmctrl -a '| Codewars — Mozilla Firefox' || wmctrl -a '| Codewars'"
+  shift+alt + 6
+
+# Show Chromium's window of title: 'Codewars - Chromium'
+"wmctrl -a '| Codewars - Chromium' || wmctrl -a '| Codewars — Chromium' || wmctrl -a '| Codewars'"
+  shift+alt + 7
+
+##################################
+# End of xbindkeys configuration #
+##################################
