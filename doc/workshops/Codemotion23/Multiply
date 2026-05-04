@@ -1,0 +1,19 @@
+---- #### KATA
+Multiply
+----
+https://www.codewars.com/kata/50654ddff44f800200000004/train/haskell
+
+---- #### NEWK
+newk multiply https://www.codewars.com/kata/50654ddff44f800200000004/train/haskell 'Multiply'
+
+---- #### SRC
+multiply :: Integer -> Integer -> Integer
+multiply a b = undefined
+
+---- #### TEST
+  describe "multiply" $ do
+    it "multiply 7 7 == 49" $
+      multiply 7 7 `shouldBe` 49
+    it "multiply 11 11 == 121" $
+      multiply 11 11 `shouldBe` 121
+
