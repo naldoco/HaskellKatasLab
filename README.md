@@ -1,4 +1,7 @@
 # newk
+
+> 📖 **Documentación completa (en español):** [https://naldoco.github.io/HaskellKatasLab/](https://naldoco.github.io/HaskellKatasLab/)
+
 **newk** is free software. It's a bash script to set up and perform **Haskell programming katas** using **TDD** methodology, **git**, and other standard tools. We recommend using it in specific HaskellKatas hackathons and with the **Codewars**'s katas (https://www.codewars.com/).
 
 The development of the newk application and its use will focus on the **GNU/Trisquel 11.0 "Aramo"** operating system, although we know that it can be installed directly on systems such as **Ubuntu** or **Debian**, and is easily portable to any other **GNU/Linux** system.
@@ -16,7 +19,7 @@ The development of the newk application and its use will focus on the **GNU/Tris
 # Install (via script) (recommended)
 Please, download **install.sh** from the repository and execute it on a GNU/Trisquel or a Debian/Ubuntu-like operating system. You can install it into a virtual machine.
 
-   https://gitlab.com/HaskellKatas/katas--proof-of-concept/-/raw/master/install/install.sh?inline=false
+   https://raw.githubusercontent.com/naldoco/HaskellKatasLab/main/install/install.sh
 
 # Install (by hand)
 

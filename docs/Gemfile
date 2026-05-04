@@ -1,0 +1,11 @@
+source "https://rubygems.org"
+
+# Para previsualizar el sitio en local:
+#   cd docs && bundle install && bundle exec jekyll serve --baseurl ""
+#
+# GitHub Pages compila el sitio sin este Gemfile; sólo es necesario para
+# desarrollo local. El gem github-pages ya incluye jekyll-remote-theme
+# y jekyll-seo-tag, así que no hace falta listarlos aquí.
+
+gem "github-pages", group: :jekyll_plugins
+gem "just-the-docs"

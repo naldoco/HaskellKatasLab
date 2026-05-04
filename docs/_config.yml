@@ -1,0 +1,50 @@
+title: HaskellKatasLab
+description: >-
+  Entorno de katas de Haskell con metodología TDD, git y herramientas
+  estándar GNU/Linux. Aprende programando a través del entrenamiento.
+remote_theme: just-the-docs/just-the-docs
+url: https://naldoco.github.io
+baseurl: /HaskellKatasLab
+lang: es
+
+color_scheme: light
+search_enabled: true
+heading_anchors: true
+
+# Callouts (cajas destacadas estilo "nota") usados con {: .note } en las páginas.
+callouts_level: quiet
+callouts:
+  note:
+    title: Nota
+    color: blue
+  warning:
+    title: Atención
+    color: yellow
+  important:
+    title: Importante
+    color: green
+
+aux_links:
+  "Repositorio en GitHub":
+    - "https://github.com/naldoco/HaskellKatasLab"
+
+aux_links_new_tab: true
+
+footer_content: >-
+  Distribuido bajo licencia
+  <a href="https://github.com/naldoco/HaskellKatasLab/blob/main/LICENSE">GNU GPL v3</a>.
+  Código fuente en
+  <a href="https://github.com/naldoco/HaskellKatasLab">GitHub</a>.
+
+back_to_top: true
+back_to_top_text: "Volver arriba"
+
+plugins:
+  - jekyll-remote-theme
+  - jekyll-seo-tag
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - vendor
+  - node_modules
